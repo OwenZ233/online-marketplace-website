@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="property.css">
+ <link rel="stylesheet" href="nav.css">
+ <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="logged_nav">
+        <nav>
+            <a href="logged_main.html">
+            <img src="images/nav_bar/web_logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="stays.html">Explore</a></li>
+                <li><a href="listing.html">My reservation</a></li>
+                <li><a href="hosts.html">My property</a></li>
+                <li>
+                    <img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+                  </ul>
+                </li>
+            </ul>
+            <img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nav_bar/user.JPG">
+                    <h3>Owen Zhang</h3>
+                </div>
+                <hr>
+
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="images/nav_bar/profile.png">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="comments.html" class="sub-menu-link">
+                    <img src="images/nav_bar/message.png">
+                    <p>Comments</p>
+                </a>
+                <a href="home.html" class="sub-menu-link">
+                    <img src="images/nav_bar/logout.png">
+                    <p>Logout</p>
+                </a>
+
+            </div>
+           </div>
+
+           <div class="notify-wrap" id="notify">
+            <div class="notify">
+                <a href="#" class="notify-link">
+                    <img src="images/nav_bar/red_bell.png">
+                    <h3>Notification</h3>
+                </a>
+                <hr>
+
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Jac.jpg">
+                    <p>Message from Jacqueline</p>
+                </a>
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/terry.jpeg">
+                    <p>Message from Terry</p>
+                </a><a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Vincent.jpeg">
+                    <p>Message from Vincent</p>
+                </a>
+            </div>
+           </div>
+
+        </nav>
+    </div>
+
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+
+    let notify = document.getElementById("notify");
+
+    function togglebell(){
+        notify.classList.toggle("open-menu");
+    }
+</script>
+
+    <div class="props">
+        <div class="prop-title">
+            <h1>Vincent Dream House</h1>
+            <div class="row">
+                <div>
+                    <span>3,000 Reviews</span>
+                </div>
+                <div>
+                    <p>Location: Los Angeles, California, United States</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="picture"><img src="images/house1.jpg"></div>
+
+        <div class="list-details">
+            <h2>Hosted by Vincent</h2>
+            <p>2 guest / 1 bed / 1 bathroom</p>
+            <h4>$ 208 / day</h4>
+        </div>
+        <hr class="line">
+        
+        <form class="checkin-form">
+            <div>
+                <label>Check-in</label>
+                <input type="text" placeholder="Add date">
+            </div>
+            <div>
+                <label>Check-out</label>
+                <input type="text" placeholder="Add date">
+            </div>
+            <div>
+                <label>Guest</label>
+                <input type="text" placeholder="2 guest">
+            </div>
+            <a href="res-detail.html" class="submit-button">
+                Reservation Again
+            </a> 
+        </form>
+
+        <ul class="moredetail">
+            <li><i></i>Trusted Host
+                <span>The Host has more than 100 positive reviews!</span>
+            </li>
+            <li><i></i>Entire Home
+                <span>100% privacy, you will have the whole unit</span>
+            </li>
+        </ul>
+
+        <hr class="line">
+
+        <p class="moreinfo">What a wonderful place to live! Write down your common now.</p>
+        <hr class="line">
+
+        <div class="host">
+            <img src="images/usericon.jpg">
+            <div>
+                <h2>Vincent</h2>
+                </span>103 reviews </p>
+            </div>
+        </div>
+        <hr class="line">
+        <div class="review-card">
+            <div class="user-info">
+                <img src="https://randomuser.me/api/portraits/women/17.jpg" alt="Avatar">
+                <h3>Emily</h3>
+            </div>
+            <div class="review-details">
+                <p class="review-date">Reviewed on June 10, 2021</p>
+                <div class="prop-info">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">Vincent's dream house was absolutely perfect for our stay in LA. Highly recommend!</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="user-info">
+                <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="Avatar">
+                <h3>Lisa</h3>
+            </div>
+            <div class="review-details">
+                <p class="review-date">Reviewed on June 10, 2021</p>
+                <div class="prop-info">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">Good!</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="user-info">
+                <img src="images/user.jpg" alt="Avatar">
+                <h3>Your comment</h3>
+            </div>
+            <div class="review-details">
+                <p class="review-date">Reviewed on June 18, 2021</p>
+                <div class="prop-info">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">That's a good experience in this house.</p>
+            </div>
+            <div class="review-details">
+                <p class="review-date" style="font-weight:bold">Host's reply on June 28, 2021</p>
+                <p class="review-text" style="color: chocolate;">Vincent: You are welcome come back again anytime!</p>
+            </div>
+        </div>
+        <div class="write-review">
+            <h3>You can reply the host here:</h3>
+            <form>
+                <textarea id="review" name="review" rows="5" required></textarea>
+
+              <button type="submit" class="submit-button">Submit Reply</button>
+            </form>
+        </div>
+          
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="logged_nav">
+        <nav>
+            <a href="logged_main.html">
+            <img src="images/nav_bar/web_logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="stays.html">Explore</a></li>
+                <li><a href="listing.html">My reservation</a></li>
+                <li><a href="hosts.html">My property</a></li>
+                <li>
+                    <img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+                  </ul>
+                </li>
+            </ul>
+            <img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nav_bar/user.JPG">
+                    <h3>Owen Zhang</h3>
+                </div>
+                <hr>
+
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="images/nav_bar/profile.png">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="comments.html" class="sub-menu-link">
+                    <img src="images/nav_bar/message.png">
+                    <p>Comments</p>
+                </a>
+                <a href="home.html" class="sub-menu-link">
+                    <img src="images/nav_bar/logout.png">
+                    <p>Logout</p>
+                </a>
+
+            </div>
+           </div>
+
+           <div class="notify-wrap" id="notify">
+            <div class="notify">
+                <a href="#" class="notify-link">
+                    <img src="images/nav_bar/red_bell.png">
+                    <h3>Notification</h3>
+                </a>
+                <hr>
+
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Jac.jpg">
+                    <p>Message from Jacqueline</p>
+                </a>
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/terry.jpeg">
+                    <p>Message from Terry</p>
+                </a><a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Vincent.jpeg">
+                    <p>Message from Vincent</p>
+                </a>
+            </div>
+           </div>
+
+        </nav>
+    </div>
+
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+
+    let notify = document.getElementById("notify");
+
+    function togglebell(){
+        notify.classList.toggle("open-menu");
+    }
+</script>
+
+
+    <div class="profile">
+        <div class=profile_left>
+            <div class="profile_image">
+                <img src="images/user.jpg" alt="profile" class="profile_pic">
+            </div>
+            <div class="profile_info">
+                <h1>User Name: Owen Zhang</h1>
+                <h1>User ID: #305786</h1>
+            </div> 
+            <div class="btn-field">
+                <button type="button" id="signinBtn"><span></span>Update Photo</button>
+
+            </div>
+        </div>
+        <div class="profile_right">
+            <form>
+            
+                <div class="input-group">
+                    
+                    <div class="input-pair">
+                        <p>First Name: </p >
+                        <div class="input-field">
+                            <i class="fa-solid fa-edit"></i>
+                            <input type="text" placeholder="Rilong">
+                        </div>
+                        <p>Last Name: </p >
+                        <div class="input-field">
+                            <i class="fa-solid fa-edit"></i>
+                            <input type="text" placeholder="Zhang">
+                        </div>
+                    </div> 
+                    
+
+                    <div class="input-pair">
+                        <p>Address1: </p >
+                        <div class="input-field" style="width:190%;">
+                            <i class="fa-solid fa-location"></i>
+                            <input type="text" placeholder="7 Grenville St">
+                        </div>
+                    </div> 
+                
+                    <div class="input-pair">
+                        <p>Address2: </p >
+                        <div class="input-field" style="width:190%;">
+                            <i class="fa-solid fa-location"></i>
+                            <input type="text">
+                        </div>
+                    </div> 
+                    
+                    <div class="input-pair">
+                        <p>Phone Number: </p >
+                        <div class="input-field" style="width:190%;">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" placeholder="4168189697">
+                        </div>
+                    </div> 
+
+                    <div class="input-pair">
+                        <p>Emergency Contact: </p >
+                        <div class="input-field" style="width:190%;">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" placeholder="6476765669">
+                        </div>
+                    </div> 
+
+                    <div class="input-pair">
+                        <p>Email:    </p >
+                        <div class="input-field" style="width:190%;">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" placeholder="rilong.zhangA@mail.utoronto.ca">
+                        </div>
+                    </div> 
+
+                    
+                </div>
+
+                    
+
+                <div class="btn-field">
+                    <button type="button" id="signinBtn"><span></span>Update Profile</button>
+    
+                </div>
+            </form>
+
+
+        </div>
+                
+    </div>
+</body>
+
+    
+</html>

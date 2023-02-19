@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="property.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div class="logged_nav">
+        <nav>
+            <a href="logged_main.html">
+            <img src="images/nav_bar/web_logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="stays.html">Explore</a></li>
+                <li><a href="listing.html">My reservation</a></li>
+                <li><a href="hosts.html">My property</a></li>
+                <li>
+                    <img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+                  </ul>
+                </li>
+            </ul>
+            <img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nav_bar/user.JPG">
+                    <h3>Owen Zhang</h3>
+                </div>
+                <hr>
+
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="images/nav_bar/profile.png">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="comments.html" class="sub-menu-link">
+                    <img src="images/nav_bar/message.png">
+                    <p>Comments</p>
+                </a>
+                <a href="home.html" class="sub-menu-link">
+                    <img src="images/nav_bar/logout.png">
+                    <p>Logout</p>
+                </a>
+
+            </div>
+           </div>
+
+           <div class="notify-wrap" id="notify">
+            <div class="notify">
+                <a href="#" class="notify-link">
+                    <img src="images/nav_bar/red_bell.png">
+                    <h3>Notification</h3>
+                </a>
+                <hr>
+
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Jac.jpg">
+                    <p>Message from Jacqueline</p>
+                </a>
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/terry.jpeg">
+                    <p>Message from Terry</p>
+                </a><a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Vincent.jpeg">
+                    <p>Message from Vincent</p>
+                </a>
+            </div>
+           </div>
+
+        </nav>
+    </div>
+
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+
+    let notify = document.getElementById("notify");
+
+    function togglebell(){
+        notify.classList.toggle("open-menu");
+    }
+</script>
+
+<div class="container">
+    <div class="list-container">
+        <div class="prop-lists">
+            <p></p>
+            <h1>Your Properties</h1>
+            <a href="new_house.html"><button class="add-button">Add New Property</button></a>
+            <div class="house">
+                <div class="prop-img">
+                    <a href="propertyex.html"><img src="images/house1.jpg"></a>
+                </div>
+                <div class="prop-info">
+                    <p>Los Angeles</p>
+                    <h3>Deluxe One Bedroom at Beverley Hill</h3>
+                    <p>1 Bedroom / 1 Bathroom</p>
+                    <div class="prop-price">
+                        <p>2 Guest</p>
+                        <h4>$ 208 <span>/ day</span></h4>
+                    </div>
+                    <a href="edit_house.html"><button class="edit-button">Edit</button></a>
+                </div>
+            </div>
+            <div class="house">
+                <div class="prop-img">
+                    <img src="images/house2.jpg">
+                </div>
+                <div class="prop-info">
+                    <p>Toronto</p>
+                    <h3>2B2B Skyline view</h3>
+                    <p>2 Bedroom / 2 Bathroom</p>
+                    <div class="prop-price">
+                        <p>2 - 4 Guest</p>
+                        <h4>$ 765 <span>/ day</span></h4>
+                    </div>
+                    <button class="edit-button">Edit</button>
+                </div>  
+            </div>
+        </div>    
+    </div>
+
+    <div class="dots">
+        <span class="in-display">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>&middot; &middot; &middot;</span>
+        <span>10</span>
+    </div>
+</div>
+    
+
+</body>
+</html>

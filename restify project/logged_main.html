@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HOME page</title>
+   <link rel="stylesheet" href="logged_main.css">
+   <link rel="stylesheet" href="nav.css">
+   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logged_nav">
+            <nav>
+                <a href="logged_main.html">
+                <img src="images/nav_bar/web_logo.png" class="logo">
+                </a>
+                <ul>
+                    <li><a href="stays.html">Explore</a></li>
+                    <li><a href="listing.html">My reservation</a></li>
+                    <li><a href="hosts.html">My property</a></li>
+                    <li>
+                        <img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+                      </ul>
+                    </li>
+                </ul>
+                <img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+    
+               <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="images/nav_bar/user.JPG">
+                        <h3>Owen Zhang</h3>
+                    </div>
+                    <hr>
+    
+                    <a href="profile.html" class="sub-menu-link">
+                        <img src="images/nav_bar/profile.png">
+                        <p>Edit Profile</p>
+                    </a>
+                    <a href="comments.html" class="sub-menu-link">
+                        <img src="images/nav_bar/message.png">
+                        <p>Comments</p>
+                    </a>
+                    <a href="home.html" class="sub-menu-link">
+                        <img src="images/nav_bar/logout.png">
+                        <p>Logout</p>
+                    </a>
+    
+                </div>
+               </div>
+    
+               <div class="notify-wrap" id="notify">
+                <div class="notify">
+                    <a href="#" class="notify-link">
+                        <img src="images/nav_bar/red_bell.png">
+                        <h3>Notification</h3>
+                    </a>
+                    <hr>
+    
+                    <a href="msg.html" class="notify-link">
+                        <img src="images/nav_bar/Jac.jpg">
+                        <p>Message from Jacqueline</p>
+                    </a>
+                    <a href="msg.html" class="notify-link">
+                        <img src="images/nav_bar/terry.jpeg">
+                        <p>Message from Terry</p>
+                    </a><a href="msg.html" class="notify-link">
+                        <img src="images/nav_bar/Vincent.jpeg">
+                        <p>Message from Vincent</p>
+                    </a>
+                </div>
+               </div>
+    
+            </nav>
+        </div>
+    
+    
+    <script>
+        let subMenu = document.getElementById("subMenu");
+    
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    
+    
+        let notify = document.getElementById("notify");
+    
+        function togglebell(){
+            notify.classList.toggle("open-menu");
+        }
+    </script>
+
+        <div class="container1">
+            <h1>Explore Your Next Place With Restify</h1>
+            <div class="search-bar">
+                <form action="stays.html">
+                    <div class="location-input">
+                        <label>Location</label>
+                        <input type="text" placeholder="Where are you going?">
+                    </div>
+                    <div>
+                      <label>Check in</label>
+                      <input type="text" placeholder="02/14/2023">
+                  </div>
+                  <div>
+                      <label>Check out</label>
+                      <input type="text" placeholder="02/15/2023">
+                  </div>
+                  <div>
+                      <label>Guest</label>
+                      <select id="guest" name="guest" class="guest" required>
+                        <option value="">Select guests number</option>
+                        <option value="1">1 guest</option>
+                        <option value="2">2 guests</option>
+                        <option value="3">3 guests</option>
+                        <option value="4">4 guests</option>
+                        <option value="5">5 guests +</option>
+                      </select>
+                  </div>
+            
+                <div>
+                    <input class="container">
+                    
+                            <div id="select" class="selectorder">
+                                <p id="selectText">Sort By <img src="images/arrow.png"></p>
+                                
+                                <ul id="list">
+                                    <li class="orders">Price (high to low)</li>
+                                    <li class="orders">Price (low to high)</li>
+                                    <li class="orders">Rate (high to low)</li>
+                                    <li class="orders">Rate (low to high)</li>
+                                </ul>
+                            </div> 
+                
+                 <script>
+                     let select = document.getElementById("select");
+                     let list = document.getElementById("list");
+                     let selectText = document.getElementById("selectText");
+                     let inputfield = document.getElementById("inputfield");
+                 
+                     let orders = document.getElementsByClassName("orders");
+                 
+                     select.onclick = function(){
+                         list.classList.toggle("open");
+                     }
+                 
+                     for(order of orders){
+                         order.onclick = function(){
+                             selectText.innerHTML = "Sort By : "+ this.innerHTML ;
+                         }
+                     }
+                 </script>
+                </div>
+                
+                  <button type="submit"><img src="images/search.png"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="sub-title">Choice Around The World</p>
+        <p>These popular destinations have a lot to offer</p>
+        <div class="countries">
+            <div>
+                <img src="images/image-1.png">
+                <h3>London</h3>
+                <p>25,111 properties</p>
+            </div>
+            <div>
+              <img src="images/image-2.png">
+                  <h3>Switzerland</h3>
+                  <p>15,910 properties</p>
+            </div>
+          <div>
+              <img src="images/image-3.png">
+                <h3>Australia</h3>
+                <p>20,322 properties</p>
+          </div>
+          <div>
+              <img src="images/image-4.png">
+                <h3>France</h3>
+                <p>17,608 properties</p>
+          </div>
+          <div>
+              <img src="images/image-5.png">
+                <h3>Amsterdam</h3>
+                <p>19,081 properties</p>
+          </div>
+          <div>
+              <img src="images/image-6.png">
+                <h3>Netherlands</h3>
+                <p>14,903 properties</p>
+          </div>
+        </div>
+        <p class="sub-title">Explore Canada</p>
+        <p>Travelers from Canada love these places</p>
+        <div class="cities">
+            <div>
+                <img src="images/Toronto.jpeg">
+                <h3>Toronto</h3>
+                <p>25,111 properties</p>
+            </div>
+            <div>
+              <img src="images/montreal.jpeg">
+                  <h3>Montreal</h3>
+                  <p>15,910 properties</p>
+            </div>
+          <div>
+              <img src="images/Vancouver.jpeg">
+                <h3>Vancouver</h3>
+                <p>20,322 properties</p>
+          </div>
+          <div>
+              <img src="images/Niagara.jpeg">
+                <h3>Niagara Falls</h3>
+                <p>17,608 properties</p>
+          </div>
+        </div>
+        <p class="sub-title">Browse by Property Type</p>
+        <p>Have experience with different places</p>
+        <div class="properties">
+            <div>
+              <img src="images/condo.jpeg">
+                  <h3>Condo</h3>
+                  <p>15,910 properties</p>
+            </div>
+          <div>
+              <img src="images/cabins.jpeg">
+                <h3>Cabins</h3>
+                <p>20,322 properties</p>
+          </div>
+          <div>
+              <img src="images/castels.jpeg">
+                <h3>Castles</h3>
+                <p>17,608 properties</p>
+          </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <div class="footer">
+        <div class="subscribe">
+            <h3>SUBSCRIBE</h3>
+            <p>Sign up and we'll send the best deals to you</p>
+            <form>
+                <input type="email" placeholder="Your Email Address" required>
+                <br>
+                <button type="submit">SUBSCRIBE NOW</button>
+            </form>
+        </div>
+            
+        </div>
+    </div>
+</footer>
+</html>
+
+
+
+
+
+

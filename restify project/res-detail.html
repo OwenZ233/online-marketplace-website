@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="property.css">
+ <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div class="logged_nav">
+        <nav>
+            <a href="logged_main.html">
+            <img src="images/nav_bar/web_logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="stays.html">Explore</a></li>
+                <li><a href="listing.html">My reservation</a></li>
+                <li><a href="hosts.html">My property</a></li>
+                <li>
+                    <img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+                  </ul>
+                </li>
+            </ul>
+            <img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nav_bar/user.JPG">
+                    <h3>Owen Zhang</h3>
+                </div>
+                <hr>
+
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="images/nav_bar/profile.png">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="comments.html" class="sub-menu-link">
+                    <img src="images/nav_bar/message.png">
+                    <p>Comments</p>
+                </a>
+                <a href="home.html" class="sub-menu-link">
+                    <img src="images/nav_bar/logout.png">
+                    <p>Logout</p>
+                </a>
+
+            </div>
+           </div>
+
+           <div class="notify-wrap" id="notify">
+            <div class="notify">
+                <a href="#" class="notify-link">
+                    <img src="images/nav_bar/red_bell.png">
+                    <h3>Notification</h3>
+                </a>
+                <hr>
+
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Jac.jpg">
+                    <p>Message from Jacqueline</p>
+                </a>
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/terry.jpeg">
+                    <p>Message from Terry</p>
+                </a><a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Vincent.jpeg">
+                    <p>Message from Vincent</p>
+                </a>
+            </div>
+           </div>
+
+        </nav>
+    </div>
+
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+
+    let notify = document.getElementById("notify");
+
+    function togglebell(){
+        notify.classList.toggle("open-menu");
+    }
+</script>
+
+    <div class="props">
+        <div class="prop-title">
+            <h1>Your Reservation is Confirmed!</h1>
+            <h2>Vincent Dream Place</h2>
+        </div>
+
+        <div class="picture"><img src="images/house1.jpg"></div>
+
+        <div class="list-details">
+            <h2>Hosted by Vincent</h2>
+            <p>2 guest / 1 bed / 1 bathroom</p>
+            <h4>Total Price: $2,300</h4>
+        </div>
+
+        <hr class="line">
+        <p class="moreinfo">Please contact your host for future steps: Check-In before 7pm</p>
+        <hr class="line">
+ 
+
+        <div class="host">
+            <img src="images/usericon.jpg">
+            <div>
+                <h2>Vincent</h2>
+                <p><span>
+                </span>103 reviews </p>
+            </div>
+            
+        </div>
+
+        <h2>Host Contact</h2>
+        <p>Name: Vincent Chen</p>
+        <p>Email: vincent.chen@gogle.com</p>
+        <p>Phone: +1 123 456 7890</p>
+        
+        <hr class="line">
+        <h2>Need Help?</h2>
+        <p class="moreinfo">Please contact us at <a href="mailto:help@exp.com">help@exp.com</a> or click <a href="cancel.html">here</a> to cancel</p>
+    </div>
+
+</body>
+</html>

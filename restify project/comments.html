@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messages and Comments</title>
+	<link rel="stylesheet" type="text/css" href="comments.css">
+    <link rel="stylesheet" type="text/css" href="property.css">
+	<link rel="stylesheet" href="nav.css">
+</head>
+<body>
+	<div class="logged_nav">
+		<nav>
+			<a href="logged_main.html">
+			<img src="images/nav_bar/web_logo.png" class="logo">
+			</a>
+			<ul>
+				<li><a href="stays.html">Explore</a></li>
+				<li><a href="listing.html">My reservation</a></li>
+				<li><a href="hosts.html">My property</a></li>
+				<li>
+					<img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+				  </ul>
+				</li>
+			</ul>
+			<img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+
+		   <div class="sub-menu-wrap" id="subMenu">
+			<div class="sub-menu">
+				<div class="user-info">
+					<img src="images/nav_bar/user.JPG">
+					<h3>Owen Zhang</h3>
+				</div>
+				<hr>
+
+				<a href="profile.html" class="sub-menu-link">
+					<img src="images/nav_bar/profile.png">
+					<p>Edit Profile</p>
+				</a>
+				<a href="comments.html" class="sub-menu-link">
+					<img src="images/nav_bar/message.png">
+					<p>Comments</p>
+				</a>
+				<a href="home.html" class="sub-menu-link">
+					<img src="images/nav_bar/logout.png">
+					<p>Logout</p>
+				</a>
+
+			</div>
+		   </div>
+
+		   <div class="notify-wrap" id="notify">
+			<div class="notify">
+				<a href="#" class="notify-link">
+					<img src="images/nav_bar/red_bell.png">
+					<h3>Notification</h3>
+				</a>
+				<hr>
+
+				<a href="msg.html" class="notify-link">
+					<img src="images/nav_bar/Jac.jpg">
+					<p>Message from Jacqueline</p>
+				</a>
+				<a href="msg.html" class="notify-link">
+					<img src="images/nav_bar/terry.jpeg">
+					<p>Message from Terry</p>
+				</a><a href="msg.html" class="notify-link">
+					<img src="images/nav_bar/Vincent.jpeg">
+					<p>Message from Vincent</p>
+				</a>
+			</div>
+		   </div>
+
+		</nav>
+	</div>
+
+
+<script>
+	let subMenu = document.getElementById("subMenu");
+
+	function toggleMenu(){
+		subMenu.classList.toggle("open-menu");
+	}
+
+
+	let notify = document.getElementById("notify");
+
+	function togglebell(){
+		notify.classList.toggle("open-menu");
+	}
+</script>
+
+	<section class="main">
+		<div class="comments">
+			<h2>Comments</h2>
+			<div class="comment">
+				<div class="avatar">
+					<img src="./images/nav_bar/Jac.jpg" alt="Avatar">
+				</div>
+				<div class="comment-content">
+					<div class="comment-header">
+						<h3>Jacqueline Liu</h3>
+						<span>5 hours ago</span>
+					</div>
+					<div class="comment-body">
+						<p>Amazing stay!</p>
+					</div>
+				</div>
+			</div>
+			<div class="comment">
+				<div class="avatar">
+					<img src="./images/nav_bar/terry.jpeg" alt="Avatar">
+				</div>
+				<div class="comment-content">
+					<div class="comment-header">
+						<h3>Terry Tu</h3>
+						<span>3 days ago</span>
+					</div>
+					<div class="comment-body">
+						<p>Nice guest!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="write-comment">
+            <h3>Rate other users:</h3>
+			
+            <form>
+				<label for="review">User ID</label>
+                <input id="userid" name="userid" rows="5" required></input>
+                <label for="review">Review</label>
+                <textarea id="review" name="review" rows="5" required></textarea>
+
+              <button type="submit" class="submit-button">Submit Review</button>
+            </form>
+        </div>
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatting Window</title>
+    <link rel="stylesheet" href="msg.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div class="logged_nav">
+        <nav>
+            <a href="logged_main.html">
+            <img src="images/nav_bar/web_logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="stays.html">Explore</a></li>
+                <li><a href="listing.html">My reservation</a></li>
+                <li><a href="hosts.html">My property</a></li>
+                <li>
+                    <img src="images/nav_bar/bell.png" class="bell" onclick="togglebell()">
+                  </ul>
+                </li>
+            </ul>
+            <img src="images/nav_bar/user.JPG" class="user-pic" onclick="toggleMenu()">
+
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nav_bar/user.JPG">
+                    <h3>Owen Zhang</h3>
+                </div>
+                <hr>
+
+                <a href="profile.html" class="sub-menu-link">
+                    <img src="images/nav_bar/profile.png">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="comments.html" class="sub-menu-link">
+                    <img src="images/nav_bar/message.png">
+                    <p>Comments</p>
+                </a>
+                <a href="home.html" class="sub-menu-link">
+                    <img src="images/nav_bar/logout.png">
+                    <p>Logout</p>
+                </a>
+
+            </div>
+           </div>
+
+           <div class="notify-wrap" id="notify">
+            <div class="notify">
+                <a href="#" class="notify-link">
+                    <img src="images/nav_bar/red_bell.png">
+                    <h3>Notification</h3>
+                </a>
+                <hr>
+
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Jac.jpg">
+                    <p>Message from Jacqueline</p>
+                </a>
+                <a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/terry.jpeg">
+                    <p>Message from Terry</p>
+                </a><a href="msg.html" class="notify-link">
+                    <img src="images/nav_bar/Vincent.jpeg">
+                    <p>Message from Vincent</p>
+                </a>
+            </div>
+           </div>
+
+        </nav>
+    </div>
+
+
+<script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+
+
+    let notify = document.getElementById("notify");
+
+    function togglebell(){
+        notify.classList.toggle("open-menu");
+    }
+</script>
+
+    <section class="container">
+        <div class="contacts">
+            <h2>Contacts</h2>
+            <ul>
+                <li class="active"><img src="images/nav_bar/Jac.jpg" alt="Avatar"><span>Jacqueline</span></li>
+                <li><img src="images/nav_bar/nomi.jpg" alt="Avatar"><span>Nomi</span></li>
+                <li><img src="images/nav_bar/suibian.jpg" alt="Avatar"><span>Suibian</span></li>
+                <li><img src="images/nav_bar/liuziyi.jpg" alt="Avatar"><span>Liuziyi</span></li>
+            </ul>
+        </div>
+
+        <div class="messages">
+            <h2>Jacqueline</h2>
+            <ul>
+                <li class="sent">
+                    <span class="time">9:30 AM</span>
+                    <p>Good morning. Do you have an approximate departure time in mind for today?</p>
+                    
+                </li>
+                <li class="received">
+                    <p>We plan to leave at 11. Could you let her arrived after 11?</p>
+                    <span class="time1">9:31 AM</span>
+                </li>
+                <li class="sent">
+                    
+                    <span class="time">9:35 AM</span>
+                    <p>No problem.</p>
+                </li>
+                <li class="received">
+                    <p>Thank you!</p>
+                    <span class="time1">9:44 AM</span>
+                </li>
+            </ul>
+
+            <div class="input">
+                <input type="text" placeholder="Type a message...">
+                <button>Send</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
